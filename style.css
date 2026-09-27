@@ -1,0 +1,492 @@
+/* =========================================================
+   Mistblossom Vanguard — CSS homework
+   Стиль адаптовано на основі дизайну сайту «Лігво Друїда».
+   ========================================================= */
+
+:root {
+    --bg-deep: #0c0a07;
+    --bg-main: #120f0c;
+    --bg-panel: rgba(34, 27, 21, 0.88);
+    --bg-panel-hover: rgba(44, 35, 27, 0.95);
+
+    --text-main: #e6e1d8;
+    --text-title: #fff6ec;
+    --text-muted: #b8ada0;
+
+    --accent: #ff9b55;
+    --accent-light: #ffc890;
+    --accent-dark: #d86324;
+    --gold: #c89b3c;
+    --teal: #79d9d3;
+
+    --border: rgba(255, 226, 196, 0.13);
+    --border-strong: rgba(255, 178, 106, 0.32);
+
+    --radius-small: 10px;
+    --radius-medium: 16px;
+    --radius-large: 24px;
+
+    --shadow-small: 0 4px 14px rgba(0, 0, 0, 0.35);
+    --shadow-large: 0 20px 50px rgba(0, 0, 0, 0.45);
+}
+
+/* Базові стилі */
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    color: var(--text-main);
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.6;
+    background-color: var(--bg-main);
+    background-image:
+        radial-gradient(circle at 15% 0%, rgba(200, 155, 60, 0.16), transparent 420px),
+        radial-gradient(circle at 85% 12%, rgba(121, 217, 211, 0.10), transparent 380px),
+        linear-gradient(180deg, var(--bg-deep), var(--bg-main));
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+a {
+    color: var(--accent-light);
+    text-decoration: none;
+    transition: color 0.25s ease, background-color 0.25s ease, transform 0.25s ease;
+}
+
+a:hover {
+    color: #ffffff;
+}
+
+/* Шапка та навігація */
+.site-header {
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    padding: 14px 20px;
+    background-color: rgba(12, 10, 7, 0.93);
+    border-bottom: 1px solid var(--border);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.28);
+}
+
+.site-nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 8px;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.nav-link {
+    display: inline-block;
+    padding: 9px 15px;
+    color: var(--text-muted);
+    font-size: 14px;
+    font-weight: bold;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    border: 1px solid transparent;
+    border-radius: 999px;
+}
+
+.nav-link:hover {
+    color: var(--text-title);
+    background-color: rgba(255, 155, 85, 0.08);
+    border-color: var(--border);
+    transform: translateY(-1px);
+}
+
+.nav-link.active {
+    color: var(--text-title);
+    background-color: rgba(255, 155, 85, 0.13);
+    border-color: var(--border-strong);
+    box-shadow: 0 0 18px rgba(255, 155, 85, 0.10);
+}
+
+/* Основна область */
+.page-content {
+    width: calc(100% - 32px);
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 46px 0 60px;
+}
+
+.page-title {
+    margin: 0 0 12px;
+    color: var(--text-title);
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 42px;
+    line-height: 1.15;
+    text-align: center;
+    letter-spacing: 0.03em;
+    text-shadow: 0 3px 18px rgba(0, 0, 0, 0.65);
+}
+
+.page-subtitle {
+    max-width: 720px;
+    margin: 0 auto 30px;
+    color: var(--text-muted);
+    text-align: center;
+}
+
+.section-title {
+    margin: 0 0 16px;
+    color: var(--text-title);
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 25px;
+    border-bottom: 1px solid var(--border);
+    padding-bottom: 10px;
+}
+
+.content-card {
+    margin: 0 0 24px;
+    padding: 24px;
+    background-color: var(--bg-panel);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-medium);
+    box-shadow: var(--shadow-small);
+    transition: transform 0.3s ease, border-color 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.content-card:hover {
+    background-color: var(--bg-panel-hover);
+    border-color: var(--border-strong);
+    box-shadow: var(--shadow-large);
+    transform: translateY(-2px);
+}
+
+/* Hero головної сторінки */
+.hero {
+    margin-bottom: 30px;
+    padding: 38px 24px 32px;
+    text-align: center;
+    background-color: rgba(34, 27, 21, 0.72);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-large);
+    box-shadow: var(--shadow-large);
+}
+
+.hero .page-title {
+    margin-top: 22px;
+}
+
+.guild-tagline {
+    margin: 0;
+    color: var(--accent-light);
+    font-size: 15px;
+    font-weight: bold;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+}
+
+/* Логотип та його анімація */
+.logo-animation {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 280px;
+    max-width: 80vw;
+    margin: 0 auto;
+    padding: 12px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(121, 217, 211, 0.14), transparent 66%);
+    animation: logoFloat 4s ease-in-out infinite;
+}
+
+.guild-logo {
+    display: block;
+    width: 250px;
+    border-radius: 50%;
+    filter: drop-shadow(0 0 15px rgba(121, 217, 211, 0.35));
+    transition: transform 0.35s ease, filter 0.35s ease;
+    animation: logoGlow 3s ease-in-out infinite;
+}
+
+.guild-logo:hover {
+    transform: scale(1.05);
+    filter:
+        drop-shadow(0 0 16px rgba(121, 217, 211, 0.70))
+        drop-shadow(0 0 28px rgba(255, 155, 85, 0.30));
+}
+
+@keyframes logoFloat {
+    0% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-10px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+@keyframes logoGlow {
+    0% {
+        filter: drop-shadow(0 0 12px rgba(121, 217, 211, 0.25));
+    }
+
+    50% {
+        filter:
+            drop-shadow(0 0 20px rgba(121, 217, 211, 0.65))
+            drop-shadow(0 0 30px rgba(255, 155, 85, 0.20));
+    }
+
+    100% {
+        filter: drop-shadow(0 0 12px rgba(121, 217, 211, 0.25));
+    }
+}
+
+/* Інформація про гільдію */
+.info-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 24px;
+    align-items: stretch;
+}
+
+.info-grid .content-card {
+    flex: 1 1 420px;
+}
+
+.guild-list {
+    margin: 0;
+    padding-left: 22px;
+}
+
+.guild-list li {
+    margin-bottom: 9px;
+}
+
+.guild-list li::marker {
+    color: var(--accent);
+}
+
+.table-wrapper {
+    width: 100%;
+    overflow-x: auto;
+}
+
+.guild-table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: rgba(12, 10, 7, 0.28);
+}
+
+.guild-table caption {
+    margin-bottom: 12px;
+    color: var(--text-muted);
+    font-size: 14px;
+    text-align: left;
+}
+
+.guild-table th,
+.guild-table td {
+    padding: 13px 15px;
+    text-align: left;
+    border-bottom: 1px solid var(--border);
+}
+
+.guild-table th {
+    width: 38%;
+    color: var(--accent-light);
+}
+
+.guild-table tr:last-child th,
+.guild-table tr:last-child td {
+    border-bottom: 0;
+}
+
+.text-link {
+    font-weight: bold;
+    border-bottom: 1px dotted rgba(255, 200, 144, 0.65);
+}
+
+/* Контакти */
+.contact-list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.contact-list li {
+    margin-bottom: 14px;
+    padding: 14px 16px;
+    background-color: rgba(12, 10, 7, 0.34);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-small);
+}
+
+.contact-list strong {
+    color: var(--text-title);
+}
+
+.contact-link {
+    font-weight: bold;
+}
+
+.game-info {
+    margin: 0;
+}
+
+.game-info b {
+    color: var(--accent-light);
+}
+
+/* Галерея */
+.gallery-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 24px;
+    align-items: stretch;
+}
+
+.gallery-card {
+    flex: 1 1 440px;
+    margin: 0;
+    overflow: hidden;
+    background-color: var(--bg-panel);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-medium);
+    box-shadow: var(--shadow-small);
+    transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.gallery-card:hover {
+    transform: translateY(-4px);
+    border-color: var(--border-strong);
+    box-shadow: var(--shadow-large);
+}
+
+.gallery-card img {
+    display: block;
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+    background-color: rgba(12, 10, 7, 0.6);
+}
+
+.gallery-card.logo-card .logo-animation {
+    display: flex;
+    margin: 24px auto 0;
+}
+
+.gallery-card.logo-card img {
+    width: 300px;
+    max-width: 80%;
+    margin: 26px auto 0;
+    aspect-ratio: 1 / 1;
+    object-fit: contain;
+}
+
+.gallery-card figcaption {
+    padding: 16px 18px 18px;
+    color: var(--text-muted);
+}
+
+.gallery-card figcaption strong {
+    display: block;
+    margin-bottom: 4px;
+    color: var(--text-title);
+    font-size: 18px;
+}
+
+/* Підвал */
+.site-footer {
+    padding: 26px 20px;
+    color: #9c948a;
+    text-align: center;
+    background-color: var(--bg-deep);
+    border-top: 1px solid var(--border);
+}
+
+.site-footer p {
+    margin: 0;
+}
+
+/* Посилання повернення */
+.back-link-box {
+    margin-top: 28px;
+    text-align: center;
+}
+
+.back-link {
+    display: inline-block;
+    padding: 10px 16px;
+    color: var(--text-title);
+    background-color: rgba(255, 155, 85, 0.10);
+    border: 1px solid var(--border-strong);
+    border-radius: 999px;
+}
+
+.back-link:hover {
+    background-color: rgba(255, 155, 85, 0.18);
+    transform: translateY(-2px);
+}
+
+/* Адаптація під менші екрани */
+@media (max-width: 700px) {
+    .site-header {
+        position: static;
+        padding: 12px;
+    }
+
+    .site-nav {
+        gap: 5px;
+    }
+
+    .nav-link {
+        padding: 8px 10px;
+        font-size: 12px;
+    }
+
+    .page-content {
+        width: calc(100% - 24px);
+        padding-top: 28px;
+    }
+
+    .page-title {
+        font-size: 32px;
+    }
+
+    .hero {
+        padding: 28px 16px 24px;
+    }
+
+    .content-card {
+        padding: 18px;
+    }
+
+    .guild-table th,
+    .guild-table td {
+        padding: 11px 10px;
+    }
+
+    .gallery-card {
+        flex-basis: 100%;
+    }
+}
+
+/* Якщо користувач вимкнув анімації у системі */
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.001ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.001ms !important;
+    }
+}

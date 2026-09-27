@@ -3,69 +3,101 @@
 <head>
     <meta charset="UTF-8">
     <meta name="description" content="Коротка інформація про гільдію Mistblossom Vanguard у World of Warcraft">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mistblossom Vanguard</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
 </head>
-<body>
-    <nav>
-        <a href="index.html">Головна</a> |
-        <a href="pages/contact.html">Контакти</a> |
-        <a href="pages/gallery.html">Галерея</a>
-    </nav>
+<body id="home-page">
+    <header id="site-header" class="site-header">
+        <nav id="main-navigation" class="site-nav">
+            <a class="nav-link active" href="index.html">Головна</a>
+            <a class="nav-link" href="pages/contact.html">Контакти</a>
+            <a class="nav-link" href="pages/gallery.html">Галерея</a>
+        </nav>
+    </header>
 
-    <h1>Mistblossom Vanguard</h1>
+    <main id="main-content" class="page-content">
+        <section id="guild-hero" class="hero">
+            <div id="logo-animation" class="logo-animation">
+                <img id="guild-logo" class="guild-logo" src="photo/guild-logo.png" alt="Логотип гільдії Mistblossom Vanguard">
+            </div>
 
-    <img src="photo/guild-logo.png" alt="Логотип гільдії Mistblossom Vanguard" width="300">
+            <h1 id="main-title" class="page-title">Mistblossom Vanguard</h1>
+            <p class="guild-tagline">World of Warcraft · EU · Terokkar</p>
+            <p class="page-subtitle">
+                Українська гільдія для рейдів, Mythic+ підземель, спільної гри та розвитку персонажів.
+            </p>
+        </section>
 
-    <h2>Про гільдію</h2>
-    <p>
-        <b>Mistblossom Vanguard</b> — українська гільдія у грі World of Warcraft.
-        Ми об'єднуємо гравців для спільної гри, проходження рейдів, Mythic+ підземель
-        та інших активностей у світі Warcraft.
-    </p>
+        <section id="about-guild" class="content-card">
+            <h2 class="section-title">Про гільдію</h2>
+            <p class="guild-description">
+                <b>Mistblossom Vanguard</b> — українська гільдія у грі World of Warcraft.
+                Ми об'єднуємо гравців для спільної гри, проходження рейдів, Mythic+ підземель
+                та інших активностей у світі Warcraft.
+            </p>
+        </section>
 
-    <h2>Коротка інформація</h2>
-    <table>
-        <caption>Основні відомості про гільдію</caption>
-        <tbody>
-            <tr>
-                <th>Назва</th>
-                <td>Mistblossom Vanguard</td>
-            </tr>
-            <tr>
-                <th>Гра</th>
-                <td>World of Warcraft</td>
-            </tr>
-            <tr>
-                <th>Регіон</th>
-                <td>EU</td>
-            </tr>
-            <tr>
-                <th>Ігровий світ</th>
-                <td>Terokkar</td>
-            </tr>
-            <tr>
-                <th>Основні активності</th>
-                <td>Рейди, Mythic+, спільна гра</td>
-            </tr>
-            <tr>
-                <th>Мова спілкування</th>
-                <td>Українська</td>
-            </tr>
-        </tbody>
-    </table>
+        <div id="guild-information" class="info-grid">
+            <section id="short-info" class="content-card">
+                <h2 class="section-title">Коротка інформація</h2>
+                <div class="table-wrapper">
+                    <table id="guild-table" class="guild-table">
+                        <caption>Основні відомості про гільдію</caption>
+                        <tbody>
+                            <tr>
+                                <th>Назва</th>
+                                <td>Mistblossom Vanguard</td>
+                            </tr>
+                            <tr>
+                                <th>Гра</th>
+                                <td>World of Warcraft</td>
+                            </tr>
+                            <tr>
+                                <th>Регіон</th>
+                                <td>EU</td>
+                            </tr>
+                            <tr>
+                                <th>Ігровий світ</th>
+                                <td>Terokkar</td>
+                            </tr>
+                            <tr>
+                                <th>Основні активності</th>
+                                <td>Рейди, Mythic+, спільна гра</td>
+                            </tr>
+                            <tr>
+                                <th>Мова спілкування</th>
+                                <td>Українська</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
 
-    <h2>Що ми робимо</h2>
-    <ul>
-        <li>Проходимо рейди.</li>
-        <li>Граємо Mythic+ підземелля.</li>
-        <li>Допомагаємо учасникам гільдії.</li>
-        <li>Спілкуємося та організовуємо спільні ігрові події.</li>
-    </ul>
+            <section id="guild-activities" class="content-card">
+                <h2 class="section-title">Що ми робимо</h2>
+                <ul class="guild-list">
+                    <li>Проходимо рейди.</li>
+                    <li>Граємо Mythic+ підземелля.</li>
+                    <li>Допомагаємо учасникам гільдії.</li>
+                    <li>Спілкуємося та організовуємо спільні ігрові події.</li>
+                </ul>
+            </section>
+        </div>
 
-    <p>
-        Більше інформації можна знайти на сторінці
-        <a href="pages/contact.html">контактів</a> або переглянути
-        <a href="pages/gallery.html">галерею</a>.
-    </p>
+        <section id="more-information" class="content-card">
+            <h2 class="section-title">Більше інформації</h2>
+            <p>
+                Перейти до сторінки
+                <a class="text-link" href="pages/contact.html">контактів</a>
+                або переглянути
+                <a class="text-link" href="pages/gallery.html">галерею гільдії</a>.
+            </p>
+        </section>
+    </main>
+
+    <footer id="site-footer" class="site-footer">
+        <p>Mistblossom Vanguard · World of Warcraft</p>
+    </footer>
 </body>
 </html>

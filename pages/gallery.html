@@ -3,29 +3,68 @@
 <head>
     <meta charset="UTF-8">
     <meta name="description" content="Галерея гільдії Mistblossom Vanguard">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Галерея — Mistblossom Vanguard</title>
+    <link rel="stylesheet" type="text/css" href="../style.css">
 </head>
-<body>
-    <nav>
-        <a href="../index.html">Головна</a> |
-        <a href="contact.html">Контакти</a> |
-        <a href="gallery.html">Галерея</a>
-    </nav>
+<body id="gallery-page">
+    <header id="site-header" class="site-header">
+        <nav id="main-navigation" class="site-nav">
+            <a class="nav-link" href="../index.html">Головна</a>
+            <a class="nav-link" href="contact.html">Контакти</a>
+            <a class="nav-link active" href="gallery.html">Галерея</a>
+        </nav>
+    </header>
 
-    <h1>Галерея</h1>
+    <main id="main-content" class="page-content">
+        <h1 id="gallery-title" class="page-title">Галерея</h1>
+        <p class="page-subtitle">
+            Логотип гільдії та зображення наших ігрових активностей.
+        </p>
 
-    <h2>Логотип гільдії</h2>
-    <img src="../photo/guild-logo.png" alt="Логотип гільдії Mistblossom Vanguard" width="300">
+        <section id="guild-gallery" class="gallery-grid">
+            <figure id="gallery-logo" class="gallery-card logo-card">
+                <div class="logo-animation">
+                    <img class="guild-logo" src="../photo/guild-logo.png" alt="Логотип гільдії Mistblossom Vanguard">
+                </div>
+                <figcaption>
+                    <strong>Логотип гільдії</strong>
+                    Символ Mistblossom Vanguard.
+                </figcaption>
+            </figure>
 
-    <h2>Гільдія</h2>
-    <img src="../photo/guild-members.png" alt="Зображення гільдії Mistblossom Vanguard" width="700">
+            <figure id="gallery-members" class="gallery-card">
+                <img src="../photo/guild-members.png" alt="Зображення гільдії Mistblossom Vanguard">
+                <figcaption>
+                    <strong>Гільдія</strong>
+                    Учасники Mistblossom Vanguard.
+                </figcaption>
+            </figure>
 
-    <h2>Рейд The Venomous Abyss</h2>
-    <img src="../photo/raid-venomous.png" alt="Рейд The Venomous Abyss" width="700">
+            <figure id="gallery-venomous" class="gallery-card">
+                <img src="../photo/raid-venomous.png" alt="Рейд The Venomous Abyss">
+                <figcaption>
+                    <strong>The Venomous Abyss</strong>
+                    Один із рейдів гільдії.
+                </figcaption>
+            </figure>
 
-    <h2>Рейд The Dreamrift</h2>
-    <img src="../photo/raid-dreamrift.png" alt="Рейд The Dreamrift" width="700">
+            <figure id="gallery-dreamrift" class="gallery-card">
+                <img src="../photo/raid-dreamrift.png" alt="Рейд The Dreamrift">
+                <figcaption>
+                    <strong>The Dreamrift</strong>
+                    Ще одна рейдова активність Mistblossom Vanguard.
+                </figcaption>
+            </figure>
+        </section>
 
-    <p><a href="../index.html">Повернутися на головну сторінку</a></p>
+        <div class="back-link-box">
+            <a class="back-link" href="../index.html">Повернутися на головну сторінку</a>
+        </div>
+    </main>
+
+    <footer id="site-footer" class="site-footer">
+        <p>Mistblossom Vanguard · World of Warcraft</p>
+    </footer>
 </body>
 </html>
